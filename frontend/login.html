@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ar">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>تسجيل / دخول</title>
+    <link rel="stylesheet" href="../assets/css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="forms">
+            <!-- Login form: method + action added -->
+            <form id="login-form" method="post" action="/api/users/login.php">
+                <h2>تسجيل الدخول</h2>
+                <label>البريد الإلكتروني أو اسم المستخدم</label>
+                <input type="text" name="identifier" required />
+                <label>كلمة المرور</label>
+                <input type="password" name="password" required />
+                <button type="submit">دخول</button>
+            </form>
+
+            <!-- Register form: method, action و enctype مضافة لتدعم رفع الملفات بدون JS -->
+            <form id="register-form" method="post" action="/api/users/register_user.php" enctype="multipart/form-data">
+                <h2>إنشاء حساب جديد</h2>
+                <label>اسم المستخدم</label>
+                <input type="text" name="username" required />
+                <label>البريد الإلكتروني</label>
+                <input type="email" name="email" required />
+                <label>كلمة المرور</label>
+                <input type="password" name="password" required />
+                <label>اللغة المفضلة</label>
+                <select name="preferred_language">
+                    <option value="ar">العربية</option>
+                    <option value="en">English</option>
+                </select>
+                <label>ملفات المستندات (يمكن اختيار ملفات متعددة)</label>
+                <input type="file" name="documents[]" multiple />
+                <button type="submit">تسجيل</button>
+            </form>
+        </div>
+
+        <div id="message"></div>
+    </div>
+
+    <script src="../assets/js/login.js"></script>
+</body>
+</html>

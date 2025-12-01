@@ -1,0 +1,59 @@
+/* بسيط لتنسيق النماذج */
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f7fb;
+    margin: 0;
+    padding: 0;
+    direction: rtl; /* لأن الواجهة بالعربية */
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.forms {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+form {
+    flex: 1 1 380px;
+    min-width: 280px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+input[type="text"], input[type="email"], input[type="password"], select, textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin: 6px 0 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background: #1e88e5;
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #176bcc;
+}
+
+#message {
+    margin-top: 12px;
+    color: #333;
+}
